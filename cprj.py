@@ -8,16 +8,11 @@ import math
 import os
 import operator
 import json
-testfilename="C:/upendra/test.json"
-testfilename1="C:/upendra/testtips.json"
-testfilenamereviews="C:/upendra/testreviews.json"
-testfilenameusers="C:/upendra/testusers.json"
-testfilenamebusiness="C:/upendra/testbusiness.json"
-reviewfilename="C:/upendra/masters/Course Data Mining/course project/yelp_dataset_challenge_academic_dataset/yelp_dataset_challenge_academic_dataset/yelp_dataset_challenge_academic_dataset/yelp_academic_dataset_review.json"
-userfilename="C:/upendra/masters/Course Data Mining/course project/yelp_dataset_challenge_academic_dataset/yelp_dataset_challenge_academic_dataset/yelp_dataset_challenge_academic_dataset/yelp_academic_dataset_user.json"
-busfilename="C:/upendra/masters/Course Data Mining/course project/yelp_dataset_challenge_academic_dataset/yelp_dataset_challenge_academic_dataset/yelp_dataset_challenge_academic_dataset/yelp_academic_dataset_business.json"
-checkinfilename="C:/upendra/masters/Course Data Mining/course project/yelp_dataset_challenge_academic_dataset/yelp_dataset_challenge_academic_dataset/yelp_dataset_challenge_academic_dataset/yelp_academic_dataset_checkin.json"
-tipsfilename="C:/upendra/masters/Course Data Mining/course project/yelp_dataset_challenge_academic_dataset/yelp_dataset_challenge_academic_dataset/yelp_dataset_challenge_academic_dataset/yelp_academic_dataset_tip.json"
+reviewfilename="yelp_academic_dataset_review.json"
+userfilename="yelp_academic_dataset_user.json"
+busfilename="yelp_academic_dataset_business.json"
+checkinfilename="yelp_academic_dataset_checkin.json"
+tipsfilename="yelp_academic_dataset_tip.json"
 #
 ##############variables for old model##################
 
@@ -83,7 +78,7 @@ cdb={}
 mfc={}
 
 #print("Building check-in.json data")
-with open(testfilename) as json_file:
+with open(checkinfilename) as json_file:
     checkinid=0
     for line in json_file.readlines():
 #        print(line)
@@ -135,7 +130,7 @@ with open(userfilename) as json_file:
 #for business.json
 mfb={}
 #print("Building business.json data")
-with open(testfilenamebusiness) as json_file:
+with open(busfilename) as json_file:
     for line in json_file.readlines():
         json_data=json.loads(line)
         bus_dict={}
@@ -164,7 +159,7 @@ with open(testfilenamebusiness) as json_file:
 #for tips json
 mft={}
 #print("Building tips.json data")
-with open(testfilename1) as json_file:
+with open(tipsfilename) as json_file:
     tipsid=0
     for line in json_file.readlines():
 #        print(line)
