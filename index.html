@@ -1,9 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home Page</title>
+	<title>Recommendation Engine</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-Hello World
+	<div align="middle">
+	<h1>Course Project Report<span style="font-size:18px"> - By Upendra.M [ 1001050282 ]</span></h1>
+	</div>
+	<hr>
+	<div class="report">
+		<h1 align="middle">Recommendation Engine for Yelp Customers</h1>
+		<p>The project mainly focuses on providing the user recommendations to the users from the yelp dataset. </p>
+		<p>The project takes the encrypted user_id as input and displays the recommendations.</p>
+		<p>The program can be executed in python installed machine to verify the output</p>
+		<h2>Input</h2>
+		<fieldset>
+		<div class="input">
+			<h3>User Encrypted ID</h3><p><strong>jE5xVugujSaskAoh2DRx3Q</strong></p>
+		</div>
+		</fieldset>
+		<h2>Output and Observations</h2>
+		<div class="output">
+			<fieldset>
+			<h3>Output</h3>
+				<p><pre>
+	Number of overall visits:  148 ( Includes the count of multiple visits made )
+	140 is the total count of unique businesses user visited
+	The Recommendations for the user are below
+	{'ywlzu819CLQOiURnKjYHfg': 2, 'X7QrpTqyGM7ZcP3l1d-1sA': 2, 'z7wUzllCnzHVuNzMQw43Hw': 2, '8m08a9xJKmANwmeuR-0bPA': 2, 'h762dZ33uhSKtLZ-21u6Jg': 2, 'e8FMAuTswDueAlLsNyLhcA': 2, 'OSlTIcDNSSt_83ciKwT1Xg': 2, 'nk6_ipMkmUvUtq6Xvncf0A': 2}
+
+	Accuracy of the model : 75.0%
+
+	The Recommendations for the user are below for 80% data
+	{'X7QrpTqyGM7ZcP3l1d-1sA': 2, 'z7wUzllCnzHVuNzMQw43Hw': 2, '8m08a9xJKmANwmeuR-0bPA': 2, 'e8FMAuTswDueAlLsNyLhcA': 2, 'h762dZ33uhSKtLZ-21u6Jg': 2, 'OSlTIcDNSSt_83ciKwT1Xg': 2}
+				</pre>
+				</p>
+			</fieldset>
+			<h3>	Observation</h3>
+			<p>
+	The model recommends the unique businesses as recommendations based on the previous experiences, reviews and check-ins information. Once the user data is analyzed all the top recommendations are sent back as output.
+	The project has some functions defined especially to evaluate the accuracy of the model for a particular user whose previous experiences are recorded in the yelp dataset. For this model the accuracy was measured by considering 80% of the yelp data review.json as train data and the remaining 20 % data is considered as test set and accuracy is recorded as 75%.
+	The current proposed model works best when the users have data either in the form of reviews or check-ins. For those who do not have either of them, we consider only the friends network and only the recommendations from the foodies are considered and returned as recommendations.
+
+			</p>
+		<h3>Future Works</h3>
+		<p>The current website displays the report but I initially planned to host a working website using DJANGO Web Framework for python, which is capable of executing python scripts in the background and generate results, but I didnt have enough time to create the functional website, which takes user input and produces the output dynamically by executing the data model and algorithms. Hence, decided to create the static report to display the input, output and observations</p>
+		<p>In future, I aim to refine the results of the model, so that the recommendations even consider the business hours of the particular business and if the business is open at the time, the request for recommendation is raised.</p>
+		<p>Also when each user plans to know more about a business and clicks on a particular recommendation, he will be shown all the various tips for the particular business and the tips given by different users </p>
+		</div>
+	</div>
 </body>
 </html>
